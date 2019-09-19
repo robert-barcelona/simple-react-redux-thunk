@@ -1,0 +1,45 @@
+import axios from "axios";
+
+import {
+  CACHE_NEW_FRIEND,
+  CLEAR_NEW_FRIEND,
+  ADD_FRIEND,
+  STORE_FRIEND,
+  DELETE_FRIEND,
+  ERROR,
+  CALLING_API,
+  FINISHED_API_CALL,
+  SORT_FRIENDS_BY_NAME
+} from "./action-types";
+
+import { logicGetFriend } from "../logic";
+
+export const sortFriends = () => ({type:SORT_FRIENDS_BY_NAME})
+export const callingAPI = () => ({ type: CALLING_API });
+export const finishedAPICall = () => ({ type: FINISHED_API_CALL });
+export const error = message => ({ type: ERROR, data: message });
+export const deleteFriend = friend => ({ type: DELETE_FRIEND, data: friend });
+export const clearNewFriend = () => ({ type: CLEAR_NEW_FRIEND });
+export const storeNewFriend = (friend) => ({ type: STORE_FRIEND,data:friend });
+
+export const cacheNewFriend = friend => ({
+  type: CACHE_NEW_FRIEND,
+  data: friend
+});
+
+export const addFriend = (friend) => dispatch => {
+  dispatch(clearNewFriend());
+  dispatch(storeNewFriend(friend))
+};
+
+export const getNewFriend = () => async dispatch => {
+  try {
+    dispatch(callingAPI());
+    const friendData = await logicGetFriend();
+    if (!friendData) throw new Error("Friend was not retrieved from API");
+    dispatch(finishedAPICall());
+    dispatch(cacheNewFriend(friendData));
+  } catch (e) {
+    dispatch(error(e.message));
+  }
+};
