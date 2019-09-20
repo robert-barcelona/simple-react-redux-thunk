@@ -1,5 +1,6 @@
 export const ADD_FRIEND = "add friend";
 export const STORE_FRIEND = "store friend";
+export const STORE_MANY_FRIENDS = "store many friends";
 export const GET_NEW_FRIEND = "get new friend";
 export const GET_NEW_FRIEND_SUCCESS = "get new friend success";
 export const CACHE_NEW_FRIEND = "cache new friend";

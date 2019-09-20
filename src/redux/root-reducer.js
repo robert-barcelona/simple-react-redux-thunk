@@ -9,7 +9,7 @@ import error from "./error-reducer";
 export const originalState = {
   apiState: { isLoading: false },
   error: "",
-  friends: [],
+  friends: null,
   newFriendCache: null
 };
 

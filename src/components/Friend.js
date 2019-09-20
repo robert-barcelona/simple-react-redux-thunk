@@ -9,14 +9,4 @@ const Friend = props => {
   </div>)
 };
 
-const mapDispatchToProps = dispatch => {
-  return {};
-};
-const mapStateToProps = state => {
-  return {};
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Friend);
+export default Friend
