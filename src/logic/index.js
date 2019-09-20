@@ -15,7 +15,7 @@ export const stringCheck = (string, name) => {
 };
 
 /**
- * 
+ *
  * @returns {Promise<{firstName: *, lastName: *, image: *, location: *, id: *, email: *}>}
  */
 export const logicGetFriend = async () => {

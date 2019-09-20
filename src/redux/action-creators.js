@@ -32,8 +32,6 @@ export const cacheNewFriend = friend => ({
 export const addFriend = friend => (dispatch) => {
   dispatch(clearNewFriend());
   dispatch(storeNewFriend(friend));
-//  const errorMessage = persistData(getState().friends, PERSIST_FRIENDS);
-  // if (errorMessage !== "") dispatch(error(errorMessage));
 };
 
 export const getNewFriend = () => async dispatch => {
