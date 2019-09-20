@@ -3,7 +3,7 @@ import React from "react";
 import { useSelector, useDispatch } from "react-redux";
 import { getNewFriend, sortFriends } from "../redux/action-creators";
 
-const ControlPanel = props => {
+const ControlPanel = () => {
   const dispatch = useDispatch();
   const friends = useSelector(state => state.friends);
 

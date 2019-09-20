@@ -1,7 +1,8 @@
 import React from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { useDispatch } from "react-redux";
 import Friend from "./Friend";
 import { deleteFriend } from "../redux/action-creators";
+import PropTypes from "prop-types";
 
 const ListFriend = props => {
   const dispatch = useDispatch();
@@ -17,6 +18,13 @@ const ListFriend = props => {
       </button>
     </div>
   );
+};
+
+ListFriend.propTypes = {
+  friend: PropTypes.shape({
+    firstName: PropTypes.string,
+    lastName: PropTypes.string
+  })
 };
 
 export default ListFriend;

@@ -1,15 +1,17 @@
 import React from "react";
-
+import '../styles/main.scss'
+import ReactModal from 'react-modal'
 import ControlPanel from "./ControlPanel";
 import FriendList from "./FriendList";
-import NewFriend from "./NewFriend";
 import Error from "./Error";
+import ModalNewFriend from "./ModalNewFriend"
 
 const App = () => {
+  ReactModal.setAppElement('#root');
   return (
     <div>
       <ControlPanel />
-      <NewFriend />
+      <ModalNewFriend />
       <FriendList />
       <Error />
     </div>
