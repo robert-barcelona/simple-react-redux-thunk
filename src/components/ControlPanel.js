@@ -1,18 +1,19 @@
 import React from "react";
 
-import { connect } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { getNewFriend, sortFriends } from "../redux/action-creators";
 
 const ControlPanel = props => {
-  const { getNewFriend, sortFriends, friends } = props;
+  const dispatch = useDispatch();
+  const friends = useSelector(state => state.friends);
 
   return (
     <div>
-      <button type="button" onClick={getNewFriend}>
+      <button type="button" onClick={() => dispatch(getNewFriend())}>
         Get New Friend
       </button>
       {friends && friends.length > 1 && (
-        <button type="button" onClick={sortFriends}>
+        <button type="button" onClick={() => dispatch(sortFriends())}>
           Sort Friends By Last Name
         </button>
       )}
@@ -20,19 +21,4 @@ const ControlPanel = props => {
   );
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    getNewFriend: () => dispatch(getNewFriend()),
-    sortFriends: () => dispatch(sortFriends())
-  };
-};
-
-const mapStateToProps = state => {
-  return {
-    friends: state.friends
-  };
-};
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(ControlPanel);
+export default ControlPanel;

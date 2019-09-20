@@ -3,12 +3,21 @@ import APIError from "./APIError";
 
 const FRIEND_URL = "https://randomuser.me/api/?nat=es&exc=login";
 
+/**
+ *
+ * @param string {string}
+ * @param name {string}
+ */
 export const stringCheck = (string, name) => {
   if (!string) throw new APIError(`${name} is missing`);
   if (typeof string !== "string")
     throw new APIError(`${name} must be of type string`);
 };
 
+/**
+ * 
+ * @returns {Promise<{firstName: *, lastName: *, image: *, location: *, id: *, email: *}>}
+ */
 export const logicGetFriend = async () => {
   try {
     const results = await axios.get(FRIEND_URL);
@@ -37,10 +46,9 @@ export const persistData = (data, index) => {
   let error = "";
   if (!data) return "Error in persisting storage: no data";
   if (!index || typeof index !== "string")
-    "Error in persisting storage: incorrect index";
+    return "Error in persisting storage: incorrect index";
   try {
     const stringified = JSON.stringify(data);
-    console.log(stringified, index);
     localStorage.setItem(index, stringified);
     return error;
   } catch (e) {

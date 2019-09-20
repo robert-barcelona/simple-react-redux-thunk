@@ -1,13 +1,13 @@
-import React, {useEffect} from "react";
-
-import {connect} from "react-redux";
+import React, { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
 import ListFriend from "./ListFriend";
-import {persistData, retrievePersistedData} from "../logic";
-import {PERSIST_FRIENDS} from "../helpers/Constants";
-import {storeManyFriends} from "../redux/action-creators";
+import { persistData, retrievePersistedData } from "../logic";
+import { PERSIST_FRIENDS } from "../helpers/Constants";
+import { storeManyFriends } from "../redux/action-creators";
 
-const FriendList = props => {
-  const {friends, storeManyFriends} = props;
+const FriendList = () => {
+  const friends = useSelector(state => state.friends);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     if (friends === null) return;
@@ -18,32 +18,19 @@ const FriendList = props => {
   useEffect(() => {
     const storedFriends = retrievePersistedData(PERSIST_FRIENDS);
     if (storedFriends) {
-      storeManyFriends(storedFriends);
+      dispatch(storeManyFriends(storedFriends));
     }
   }, []);
 
   return (
     <div>
-      {friends && friends.length !== 0 &&
-      friends.map(friend => {
-        return <ListFriend friend={friend} key={friend.id}/>;
-      })}
+      {friends &&
+        friends.length !== 0 &&
+        friends.map(friend => {
+          return <ListFriend friend={friend} key={friend.id} />;
+        })}
     </div>
   );
 };
 
-const mapDispatchToProps = dispatch => {
-  return {
-    storeManyFriends: friends => dispatch(storeManyFriends(friends))
-  };
-};
-const mapStateToProps = state => {
-  return {
-    friends: state.friends
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(FriendList);
+export default FriendList;
