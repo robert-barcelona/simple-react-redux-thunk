@@ -16,11 +16,9 @@ function reducer(state = initialState, action) {
       return friends.sort(sort_friends_by_name);
 
     case STORE_MANY_FRIENDS:
-      console.log('calling store many friends')
       return action.data
 
     case STORE_FRIEND:
-      console.log('calling store friend')
       return [...state, action.data];
 
     case DELETE_FRIEND:

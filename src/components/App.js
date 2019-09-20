@@ -3,6 +3,8 @@ import React from "react";
 import ControlPanel from "./ControlPanel";
 import FriendList from "./FriendList";
 import NewFriend from "./NewFriend";
+import Error from "./Error"
+
 
 const App = () => {
 
@@ -11,6 +13,7 @@ const App = () => {
       <ControlPanel />
       <NewFriend />
       <FriendList />
+      <Error/>
     </div>
   );
 };

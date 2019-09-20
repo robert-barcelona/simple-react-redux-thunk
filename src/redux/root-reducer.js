@@ -4,11 +4,11 @@ import { combineReducers } from "redux";
 import apiState from "./api-state-reducer.js";
 import newFriendCache from "./new-friend-reducer";
 import friends from "./friends-reducer";
-import error from "./error-reducer";
+import errorMessage from "./error-message-reducer";
 
 export const originalState = {
   apiState: { isLoading: false },
-  error: "",
+  errorMessage: "",
   friends: null,
   newFriendCache: null
 };
@@ -16,7 +16,7 @@ export const originalState = {
 const rootReducer = combineReducers({
   apiState,
   friends,
-  error,
+  errorMessage,
   newFriendCache
 });
 

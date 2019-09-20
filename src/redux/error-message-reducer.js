@@ -9,7 +9,7 @@ function reducer(state = initialState, action) {
   switch (action.type) {
 
     case ERROR:
-      return {isLoading:action.data}
+      return action.data
 
     default:
       return state;
