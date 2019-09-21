@@ -1,0 +1,158 @@
+[
+  {
+    "gender": "female",
+    "name": {
+      "title": "ms",
+      "first": "malu",
+      "last": "mendes"
+    },
+    "location": {
+      "street": "7196 rua quinze de novembro ",
+      "city": "parnaíba",
+      "state": "rio grande do norte",
+      "postcode": 49770,
+      "coordinates": {
+        "latitude": "-75.9900",
+        "longitude": "6.0742"
+      },
+      "timezone": {
+        "offset": "+5:30",
+        "description": "Bombay, Calcutta, Madras, New Delhi"
+      }
+    },
+    "email": "malu.mendes@example.com",
+    "login": {
+      "uuid": "a9dbb9ab-7e57-4151-87c4-0084a6c6dd67",
+      "username": "crazybear152",
+      "password": "sauron",
+      "salt": "7uBgveIC",
+      "md5": "5b197a5f7fb83dd16747754f8b0e2a72",
+      "sha1": "071b76c75cede2d88fb44f8a8109812421647352",
+      "sha256": "420e8b4798407e8e4fb8ac25a37d39460b3085283b653ee8ee6aac09712203c0"
+    },
+    "dob": {
+      "date": "1973-06-06T03:06:09Z",
+      "age": 46
+    },
+    "registered": {
+      "date": "2006-11-03T17:34:04Z",
+      "age": 12
+    },
+    "phone": "(37) 4884-4494",
+    "cell": "(61) 2406-3154",
+    "id": {
+      "name": "",
+      "value": null
+    },
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/women/64.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/women/64.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/64.jpg"
+    },
+    "nat": "BR"
+  },
+  {
+    "gender": "female",
+    "name": {
+      "title": "miss",
+      "first": "misty",
+      "last": "baker"
+    },
+    "location": {
+      "street": "1937 elgin st",
+      "city": "hervey bay",
+      "state": "queensland",
+      "postcode": 1856,
+      "coordinates": {
+        "latitude": "-88.4639",
+        "longitude": "125.8312"
+      },
+      "timezone": {
+        "offset": "+5:45",
+        "description": "Kathmandu"
+      }
+    },
+    "email": "misty.baker@example.com",
+    "login": {
+      "uuid": "b05bd476-8957-43e8-95ab-1f5569abc5c5",
+      "username": "sadcat977",
+      "password": "party",
+      "salt": "MvEo4FLu",
+      "md5": "42c5c40dc0d106a5bd4e8c6ad8db433b",
+      "sha1": "4dbb9333ccf3ab5970c753218cc34a7eaa1a17ef",
+      "sha256": "771e8634c8ffcb67ee5bd4504b837ad992da4f48e17e975e704d9fc6beff0e9e"
+    },
+    "dob": {
+      "date": "1964-05-07T06:30:53Z",
+      "age": 55
+    },
+    "registered": {
+      "date": "2007-07-24T14:09:30Z",
+      "age": 12
+    },
+    "phone": "05-6773-8375",
+    "cell": "0477-401-893",
+    "id": {
+      "name": "TFN",
+      "value": "380576799"
+    },
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/women/42.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/women/42.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/42.jpg"
+    },
+    "nat": "AU"
+  },
+  {
+    "gender": "female",
+    "name": {
+      "title": "miss",
+      "first": "misty",
+      "last": "baker"
+    },
+    "location": {
+      "street": "1937 elgin st",
+      "city": "hervey bay",
+      "state": "queensland",
+      "postcode": 1856,
+      "coordinates": {
+        "latitude": "-88.4639",
+        "longitude": "125.8312"
+      },
+      "timezone": {
+        "offset": "+5:45",
+        "description": "Kathmandu"
+      }
+    },
+    "email": "misty.baker@example.com",
+    "login": {
+      "uuid": "b05bd476-8957-43e8-95ab-1f5569abc5c5",
+      "username": "sadcat977",
+      "password": "party",
+      "salt": "MvEo4FLu",
+      "md5": "42c5c40dc0d106a5bd4e8c6ad8db433b",
+      "sha1": "4dbb9333ccf3ab5970c753218cc34a7eaa1a17ef",
+      "sha256": "771e8634c8ffcb67ee5bd4504b837ad992da4f48e17e975e704d9fc6beff0e9e"
+    },
+    "dob": {
+      "date": "1964-05-07T06:30:53Z",
+      "age": 55
+    },
+    "registered": {
+      "date": "2007-07-24T14:09:30Z",
+      "age": 12
+    },
+    "phone": "05-6773-8375",
+    "cell": "0477-401-893",
+    "id": {
+      "name": "TFN",
+      "value": "380576799"
+    },
+    "picture": {
+      "large": "https://randomuser.me/api/portraits/women/42.jpg",
+      "medium": "https://randomuser.me/api/portraits/med/women/42.jpg",
+      "thumbnail": "https://randomuser.me/api/portraits/thumb/women/42.jpg"
+    },
+    "nat": "AU"
+  }
+]

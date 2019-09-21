@@ -15,10 +15,12 @@ export const stringCheck = (string, name) => {
 };
 
 /**
- * 
+ *
  * @returns {Promise<{firstName: *, lastName: *, image: *, location: *, id: *, email: *}>}
  */
 export const logicGetFriend = async () => {
+
+
   try {
     const results = await axios.get(FRIEND_URL);
     if (!results) return;
@@ -28,8 +30,9 @@ export const logicGetFriend = async () => {
       lastName: data.name.last,
       location: data.location,
       email: data.email,
-      image: data.picture.medium,
-      id: data.id.value
+      image: data.picture.large,
+      phone:data.phone,
+      id: data.id.value,
     };
   } catch (e) {
     throw new Error(e.message);

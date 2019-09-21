@@ -1,17 +1,20 @@
+@import '../../styles/includes.scss';
+
 .control-panel {
-  font-family: "Big Shoulders Text", cursive;
   display: flex;
   justify-content: flex-end;
   align-items: center;
   width: 100%;
   padding-right: 40px;
-  background: rgba(70, 36, 100, 0.9) url(../../images/ghibli.png) no-repeat;
+  background: rgba(41, 3, 125, 0.9) url(../../images/ghibli.png) no-repeat;
   background-size: contain;
   height: 100px;
+  border: solid 1px rgba(255, 0, 180, 0.9);
   .title {
-    color: rgba(244, 245, 255, 0.75);
-    font-size: 60px;
-    font-weight: 900;
+    font-family: $app-font;
+    color: rgba(255, 170, 60, 0.75);
+    font-size: 70px;
+    font-weight: 400;
     display: block;
     margin-right: auto;
     margin-top:20px;
@@ -19,14 +22,7 @@
     margin-left: 140px;
   }
   .control-button {
-    margin-right: 10px;
-    padding: 10px;
-    border-radius: 25px;
-    cursor: pointer;
-    background: rgba(187, 0, 163, 0.9) url(../../images/ghibli.png) no-repeat;
-    &:hover {
-      background: rgba(248, 35, 83, 0.9);
-    }
-    border: 1px dotted rgba(255, 255, 255, 0.9);
+    @include app-button;
+    font-size:24px;
   }
 }

@@ -12,18 +12,20 @@ const ModalNewFriend = () => {
   if (newFriendCache) {
     return (
       <ReactModal isOpen={newFriendCache !== null}>
-        <div>
-          <div>
+        <div className="modal-friend">
+          <div >
             <Friend friend={newFriendCache}/>
           </div>
           <button
             type="button"
+            className="friend-button"
             onClick={() => dispatch(addFriend(newFriendCache))}
           >
             Add Friend
           </button>
           <button
             type="button"
+            className="friend-button"
             onClick={() => dispatch(clearNewFriend(newFriendCache))}
           >
             Cancel

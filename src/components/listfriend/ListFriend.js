@@ -14,7 +14,7 @@ const ListFriend = props => {
       <div>
         <Friend friend={friend} />
       </div>
-      <button type="button" onClick={() => dispatch(deleteFriend(friend))}>
+      <button className="friend-button" type="button" onClick={() => dispatch(deleteFriend(friend))}>
         Delete Friend
       </button>
     </div>

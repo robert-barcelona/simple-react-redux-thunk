@@ -1,9 +1,10 @@
+@import "../../styles/includes.scss";
+
+
 .list-friend {
-  $friend-size:250px;
-  height:$friend-size;
-  width:$friend-size;
-  background: rgba(255, 0, 34, 0.72);
-  border:solid 1px black;
-  margin:20px;
-  border-radius:20px;
+  $background-color: rgba(100,100,100,0.5);
+  @include friend-container($background-color,300px,400px);
+  .friend-card {
+    @include friend-card($background-color);
+  }
 }
