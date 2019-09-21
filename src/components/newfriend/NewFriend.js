@@ -1,7 +1,7 @@
 import React from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Friend from "./Friend";
-import { addFriend, clearNewFriend } from "../redux/action-creators";
+import Friend from "../friend/Friend";
+import { addFriend, clearNewFriend } from "../../redux/action-creators";
 
 const NewFriend = () => {
   const newFriendCache = useSelector(state => state.newFriendCache);

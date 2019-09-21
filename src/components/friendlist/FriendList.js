@@ -1,9 +1,10 @@
 import React, { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import ListFriend from "./ListFriend";
-import { persistData, retrievePersistedData } from "../logic";
-import { PERSIST_FRIENDS } from "../helpers/Constants";
-import { storeManyFriends } from "../redux/action-creators";
+import './friendList.scss'
+import ListFriend from "../listfriend/ListFriend";
+import { persistData, retrievePersistedData } from "../../logic";
+import { PERSIST_FRIENDS } from "../../helpers/Constants";
+import { storeManyFriends } from "../../redux/action-creators";
 
 const FriendList = () => {
   const friends = useSelector(state => state.friends);
@@ -23,12 +24,12 @@ const FriendList = () => {
   }, []);
 
   return (
-    <div>
-      {friends &&
-        friends.length !== 0 &&
-        friends.map(friend => {
-          return <ListFriend friend={friend} key={friend.id} />;
-        })}
+    <div className="friend-list">
+      <div className="friend-list-inner">{friends &&
+      friends.length !== 0 &&
+      friends.map(friend => {
+        return <ListFriend friend={friend} key={friend.id}/>;
+      })}</div>
     </div>
   );
 };

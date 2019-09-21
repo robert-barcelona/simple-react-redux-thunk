@@ -1,15 +1,16 @@
 import React from "react";
 import { useDispatch } from "react-redux";
-import Friend from "./Friend";
-import { deleteFriend } from "../redux/action-creators";
+import Friend from "../friend/Friend";
+import { deleteFriend } from "../../redux/action-creators";
 import PropTypes from "prop-types";
+import './listFriend.scss'
 
 const ListFriend = props => {
   const dispatch = useDispatch();
 
   const { friend } = props;
   return (
-    <div>
+    <div className="list-friend">
       <div>
         <Friend friend={friend} />
       </div>

@@ -1,0 +1,32 @@
+.control-panel {
+  font-family: "Big Shoulders Text", cursive;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  padding-right: 40px;
+  background: rgba(70, 36, 100, 0.9) url(../../images/ghibli.png) no-repeat;
+  background-size: contain;
+  height: 100px;
+  .title {
+    color: rgba(244, 245, 255, 0.75);
+    font-size: 60px;
+    font-weight: 900;
+    display: block;
+    margin-right: auto;
+    margin-top:20px;
+    letter-spacing: .2em;
+    margin-left: 140px;
+  }
+  .control-button {
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 25px;
+    cursor: pointer;
+    background: rgba(187, 0, 163, 0.9) url(../../images/ghibli.png) no-repeat;
+    &:hover {
+      background: rgba(248, 35, 83, 0.9);
+    }
+    border: 1px dotted rgba(255, 255, 255, 0.9);
+  }
+}

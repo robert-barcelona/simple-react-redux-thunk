@@ -1,8 +1,9 @@
 import React from "react";
 import {useSelector, useDispatch} from "react-redux";
 import ReactModal from "react-modal";
-import Friend from "./Friend";
-import {addFriend, clearNewFriend} from "../redux/action-creators";
+import './modalNewFriend.scss'
+import Friend from "../friend/Friend";
+import {addFriend, clearNewFriend} from "../../redux/action-creators";
 
 const ModalNewFriend = () => {
   const newFriendCache = useSelector(state => state.newFriendCache);
